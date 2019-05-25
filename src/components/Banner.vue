@@ -2,6 +2,7 @@
   <div id="mainBanner">
     <span>
       <h1>{{ msg }}</h1>
+      <button>Click here</button>
     </span>
   </div>
 </template>
