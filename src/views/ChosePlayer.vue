@@ -1,5 +1,5 @@
 <template>
-  <div id="mainWelcome">
+  <div id="mainChosePlayer">
     <Banner msg="Lots of text to see what happens if it outgrows the box lalalalalalalalala more things go here and even longer" />
   </div>
 </template>
@@ -8,7 +8,7 @@
 import Banner from '@/components/Banner.vue'
 
 export default {
-  name: 'Welcome',
+  name: 'ChosePlayer',
   components: {
     Banner
   }
@@ -17,10 +17,10 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
-#mainWelcome {
-  /* background-color: purple; */
-  background-size: cover;
-  background-image: url("../assets/woodsbackground.jpg");
-  height: 1000px;
-}
+  #mainChosePlayer {
+    /* background-color: purple; */
+    background-size: cover;
+    background-image: url("../assets/woodsbackground.jpg");
+    height: 1000px;
+  }
 </style>

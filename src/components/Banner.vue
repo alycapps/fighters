@@ -2,7 +2,7 @@
   <div id="mainBanner">
     <span>
       <h1>{{ msg }}</h1>
-      <button>Click here</button>
+      <router-link :to="{ path: nextPage}">Home</router-link>
     </span>
   </div>
 </template>
@@ -10,8 +10,14 @@
 <script>
 export default {
   name: 'Banner',
+  // data: function() {
+  //       return {
+  //           nextPage: ''
+  //       }
+  //   },
   props: {
-    msg: String
+    msg: String,
+    nextPage: String
   }
 }
 </script>
