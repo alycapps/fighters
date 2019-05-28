@@ -1,16 +1,50 @@
 <template>
   <div id="mainChosePlayer">
-    <Banner msg="Lots of text to see what happens if it outgrows the box lalalalalalalalala more things go here and even longer" />
+    <Banner 
+    msg="What sort of creature are you?"
+    nextPage="/battle"
+    btnName="Continue"
+    >
+      <br />
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <Card
+            title="Phoenix"
+            subtitle="Arise from the fire"
+            description="---"
+            />
+          </div>
+          <div class="col-md-4">
+            <Card
+            title="Mermaid"
+            subtitle="Arise from the water"
+            description="---"
+            />
+          </div>
+          <div class="col-md-4">
+            <Card
+            title="Unicorn"
+            subtitle="Arise from the woods"
+            description="---"
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+    </Banner>
   </div>
 </template>
 
 <script>
 import Banner from '@/components/Banner.vue'
+import Card from '@/components/Card.vue'
 
 export default {
   name: 'ChosePlayer',
   components: {
-    Banner
+    Banner,
+    Card
   }
 }
 

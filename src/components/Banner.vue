@@ -2,7 +2,10 @@
   <div id="mainBanner">
     <span>
       <h1>{{ msg }}</h1>
-      <router-link :to="{ path: nextPage}">Home</router-link>
+      <slot></slot>
+      <button type="button" class="btn btn-warning">
+        <router-link :to="{ path: nextPage}">{{btnName}}</router-link>
+      </button>
     </span>
   </div>
 </template>
@@ -17,7 +20,8 @@ export default {
   //   },
   props: {
     msg: String,
-    nextPage: String
+    nextPage: String,
+    btnName: String
   }
 }
 </script>
@@ -25,11 +29,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #mainBanner {
-  width: 40%;
+  width: 70%;
   background-color: rgb(102, 51, 0);
   color: white;
   position: absolute;
   top: 50%;
-  left: 30%
+  left: 15%
 }
 </style>
