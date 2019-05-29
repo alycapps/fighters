@@ -6,6 +6,8 @@
     <div class="col-md-5"> -->
 
     <div class="card" >
+
+       <img v-if="source" class="card-img-top" v-bind:src="source" >
       <div class="card-body">
         <h5 class="card-title">{{title}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{subtitle}}</h6>
@@ -36,7 +38,8 @@ export default {
   props: {
     title: String,
     subtitle: String,
-    description: String
+    description: String,
+    source: String
   }
 }
 </script>

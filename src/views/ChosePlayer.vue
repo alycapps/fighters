@@ -13,6 +13,7 @@
             title="Phoenix"
             subtitle="Arise from the fire"
             description="---"
+            source="@/assets/phoenix.jpg"
             />
           </div>
           <div class="col-md-4">
@@ -20,6 +21,7 @@
             title="Mermaid"
             subtitle="Arise from the water"
             description="---"
+            source="@/assets/mermaid.jpg"
             />
           </div>
           <div class="col-md-4">
@@ -27,6 +29,7 @@
             title="Unicorn"
             subtitle="Arise from the woods"
             description="---"
+            source="@/assets/unicorn.jpg"
             />
           </div>
         </div>
