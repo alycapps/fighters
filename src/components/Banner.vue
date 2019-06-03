@@ -3,9 +3,9 @@
     <span>
       <h1>{{ msg }}</h1>
       <slot></slot>
-      <button type="button" class="btn btn-warning">
+      <!-- <button type="button" class="btn btn-warning">
         <router-link :to="{ path: nextPage}">{{btnName}}</router-link>
-      </button>
+      </button> -->
     </span>
   </div>
 </template>
@@ -19,9 +19,9 @@ export default {
   //       }
   //   },
   props: {
-    msg: String,
-    nextPage: String,
-    btnName: String
+    msg: String
+    // nextPage: String,
+    // btnName: String
   }
 }
 </script>

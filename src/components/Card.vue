@@ -1,29 +1,16 @@
 <template>
   <div id="mainCard">
- 
- <!-- <div class="container">
-  <div class="row">
-    <div class="col-md-5"> -->
-
     <div class="card" >
-
-       <img v-if="source" class="card-img-top" v-bind:src="source" >
+       <img v-if=imgURL class="card-img-top" v-bind:src=imgURL>
       <div class="card-body">
         <h5 class="card-title">{{title}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{subtitle}}</h6>
         <p class="card-text">{{description}}</p>
-        <!-- <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a> -->
         <button type="button" class="btn btn-warning">
-          Select
+          <router-link :to="{ path: nextPage}">{{btnName}}</router-link>
         </button>
       </div>
     </div>
-
-    <!-- </div>
-    </div>
-  </div> -->
-
   </div>
 </template>
 
@@ -32,15 +19,22 @@ export default {
   name: 'Card',
   // data: function() {
   //       return {
-  //           nextPage: ''
+  //           source: ''
   //       }
   //   },
   props: {
     title: String,
     subtitle: String,
     description: String,
-    source: String
+    imgURL: String,
+    nextPage: String,
+    btnName: String
   }
+  // methods: {
+  //   imageCreator: function() {
+  //         return require(this.imgURL)
+  //       }
+  // }
 }
 </script>
 

@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
 import Welcome from '@/views/Welcome.vue'
 import ChosePlayer from '@/views/ChosePlayer.vue'
+import Battle from '@/views/Battle.vue'
+import Missing from '@/views/Missing.vue'
 
 Vue.use(Router)
 
@@ -12,11 +13,6 @@ export default new Router({
       path: '/',
       name: 'welcome',
       component: Welcome
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Home
     },
     // {
     // path: '/about',
@@ -30,6 +26,16 @@ export default new Router({
       path: '/player',
       name: 'player',
       component: ChosePlayer
+    },
+    {
+      path: '/battle',
+      name: 'battle',
+      component: Battle
+    },
+    {
+      path: '/*',
+      name: 'missing',
+      component: Missing
     }
   ]
 })

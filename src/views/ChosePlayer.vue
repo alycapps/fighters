@@ -1,9 +1,7 @@
 <template>
   <div id="mainChosePlayer">
-    <Banner 
+    <Banner
     msg="What sort of creature are you?"
-    nextPage="/battle"
-    btnName="Continue"
     >
       <br />
       <div class="container">
@@ -13,7 +11,9 @@
             title="Phoenix"
             subtitle="Arise from the fire"
             description="---"
-            source="@/assets/phoenix.jpg"
+            :imgURL=phoenixPic
+            nextPage="/battle"
+            btnName="Continue"
             />
           </div>
           <div class="col-md-4">
@@ -21,7 +21,9 @@
             title="Mermaid"
             subtitle="Arise from the water"
             description="---"
-            source="@/assets/mermaid.jpg"
+            :imgURL=mermaidPic
+            nextPage="/battle"
+            btnName="Continue"
             />
           </div>
           <div class="col-md-4">
@@ -29,7 +31,9 @@
             title="Unicorn"
             subtitle="Arise from the woods"
             description="---"
-            source="@/assets/unicorn.jpg"
+            :imgURL="unicornPic"
+            nextPage="/battle"
+            btnName="Continue"
             />
           </div>
         </div>
@@ -48,6 +52,20 @@ export default {
   components: {
     Banner,
     Card
+  },
+  // data: function() {
+  //     return {
+  //       mermaidPic: url("@/assets/mermaid.jpg"),
+  //       phoenixPic: require("@/assets/phoenix.jpg"),
+  //       unicornPic: require("@/assets/unicorn.jpg"),
+  //       pTitle: "Phoenix new title"
+  //     }
+  //   }
+  data () {
+    mermaidPic: url("@/assets/mermaid.jpg");
+    phoenixPic: require("@/assets/phoenix.jpg");
+    unicornPic: require("@/assets/unicorn.jpg");
+    pTitle: "Phoenix new title"
   }
 }
 
