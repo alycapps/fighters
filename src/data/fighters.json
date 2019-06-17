@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Phoenix",
+    "type": "fire",
+    "chosen": false
+  },
+  {
+    "id": 2,
+    "name": "Mermaid",
+    "type": "water",
+    "chosen": false
+  },
+  {
+    "id": 3,
+    "name": "Unicorn",
+    "type": "earth",
+    "chosen": false
+  }
+]
