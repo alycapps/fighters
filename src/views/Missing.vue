@@ -1,3 +1,5 @@
+// This page will load when the user finds an unkown path 
+
 <template>
   <div id="mainWelcome">
     <Banner 

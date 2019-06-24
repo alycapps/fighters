@@ -1,3 +1,7 @@
+// This is the first page users will <style lang="less">
+
+</style>
+
 <template>
   <div id="mainWelcome">
     <Banner 

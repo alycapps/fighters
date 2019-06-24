@@ -1,3 +1,5 @@
+// This page is where the fights actually occur
+
 <template>
   <div id="mainBattle">
     <div class="container">
@@ -7,7 +9,7 @@
             title="You"
             subtitle="Lets do this"
             description="---"
-            source="src/assets/phoenix.jpg"
+            <!-- source="src/assets/phoenix.jpg" -->
             />
           </div>
           <div class="col-md-4">
@@ -15,7 +17,7 @@
             title="Fight Stats"
             subtitle="things"
             description="---"
-            source="@/assets/mermaid.jpg"
+            <!-- source="@/assets/mermaid.jpg" -->
             />
           </div>
           <div class="col-md-4">
@@ -23,7 +25,7 @@
             title="Opponent"
             subtitle="Grrr"
             description="---"
-            source="@/assets/unicorn.jpg"
+            <!-- source="@/assets/unicorn.jpg" -->
             />
           </div>
         </div>
@@ -32,7 +34,7 @@
 </template>
 
 <script>
-import Card from '@/components/Card.vue'
+import Card from '@/components/Card.vue';
 
 export default {
   name: 'Battle',

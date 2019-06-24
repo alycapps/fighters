@@ -1,3 +1,6 @@
+// This page allows users to chose their figter for the duration of the game
+// Fighter type will give them advantages/disadvantages during the game
+
 <template>
   <div id="mainChosePlayer">
     <Banner
@@ -8,7 +11,7 @@
         <div class="row">
           <div class="col-md-4">
             <Card
-            title="Phoenix"
+            <!-- :title="fighters[0].name" -->
             subtitle="Arise from the fire"
             description="---"
             :imgURL=phoenixPic
@@ -46,6 +49,7 @@
 <script>
 import Banner from '@/components/Banner.vue'
 import Card from '@/components/Card.vue'
+import fighters from "../data/fighters.json";
 
 export default {
   name: 'ChosePlayer',
@@ -65,7 +69,8 @@ export default {
     mermaidPic: url("@/assets/mermaid.jpg");
     phoenixPic: require("@/assets/phoenix.jpg");
     unicornPic: require("@/assets/unicorn.jpg");
-    pTitle: "Phoenix new title"
+    pTitle: "Phoenix new title";
+    fighters: fighters
   }
 }
 
