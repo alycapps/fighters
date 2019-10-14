@@ -9,36 +9,18 @@
       <br />
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
+          <!-- add all fighers as options -->
+          <div v-for="fighter in fighters" class="col-md-4">
             <Card
-            title="fighters[0].name"
-            subtitle="Arise from the fire"
-            description="---"
-            imgURL="phoenix.jpg"
-            nextPage="/battle"
-            btnName="Continue"
+              :title="fighter.name"
+              :subtitle="fighter.subtitle"
+              :description="fighter.description"
+              :imgURL="fighter.image"
+              nextPage="/battle"
+              btnName="Continue"
             />
           </div>
-          <div class="col-md-4">
-            <Card
-            title="Mermaid"
-            subtitle="Arise from the water"
-            description="---"
-            imgURL="mermaid.jpg"
-            nextPage="/battle"
-            btnName="Continue"
-            />
-          </div>
-          <div class="col-md-4">
-            <Card
-            title="Unicorn"
-            subtitle="Arise from the woods"
-            description="---"
-            imgURL="unicorn.jpg"
-            nextPage="/battle"
-            btnName="Continue"
-            />
-          </div>
+
         </div>
       </div>
       <br />
@@ -56,6 +38,11 @@ export default {
   components: {
     Banner,
     Card
+  },
+  data: function() {
+    return {
+        fighters: fighters
+    }
   }
 }
 

@@ -2,6 +2,9 @@
   {
     "id": 1,
     "name": "Phoenix",
+    "subtitle": "Arise from the fire.",
+    "image": "phoenix.jpg",
+    "description": "-----",
     "type": "fire",
     "weakness": "water",
     "chosen": false
@@ -9,6 +12,9 @@
   {
     "id": 2,
     "name": "Mermaid",
+    "subtitle": "Arise from the water.",
+    "image": "mermaid.jpg",
+    "description": "-----",
     "type": "water",
     "weakness": "earth",
     "chosen": false
@@ -16,6 +22,9 @@
   {
     "id": 3,
     "name": "Unicorn",
+    "subtitle": "Arise from the woods.",
+    "image": "unicorn.jpg",
+    "description": "-----",
     "type": "earth",
     "weakness": "fire",
     "chosen": false
