@@ -11,10 +11,10 @@
         <div class="row">
           <div class="col-md-4">
             <Card
-            <!-- :title="fighters[0].name" -->
+            title="fighters[0].name"
             subtitle="Arise from the fire"
             description="---"
-            :imgURL=phoenixPic
+            imgURL="phoenix.jpg"
             nextPage="/battle"
             btnName="Continue"
             />
@@ -24,7 +24,7 @@
             title="Mermaid"
             subtitle="Arise from the water"
             description="---"
-            :imgURL=mermaidPic
+            imgURL="mermaid.jpg"
             nextPage="/battle"
             btnName="Continue"
             />
@@ -34,7 +34,7 @@
             title="Unicorn"
             subtitle="Arise from the woods"
             description="---"
-            :imgURL="unicornPic"
+            imgURL="unicorn.jpg"
             nextPage="/battle"
             btnName="Continue"
             />
@@ -56,21 +56,6 @@ export default {
   components: {
     Banner,
     Card
-  },
-  // data: function() {
-  //     return {
-  //       mermaidPic: url("@/assets/mermaid.jpg"),
-  //       phoenixPic: require("@/assets/phoenix.jpg"),
-  //       unicornPic: require("@/assets/unicorn.jpg"),
-  //       pTitle: "Phoenix new title"
-  //     }
-  //   }
-  data () {
-    mermaidPic: url("@/assets/mermaid.jpg");
-    phoenixPic: require("@/assets/phoenix.jpg");
-    unicornPic: require("@/assets/unicorn.jpg");
-    pTitle: "Phoenix new title";
-    fighters: fighters
   }
 }
 

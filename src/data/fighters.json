@@ -3,18 +3,21 @@
     "id": 1,
     "name": "Phoenix",
     "type": "fire",
+    "weakness": "water",
     "chosen": false
   },
   {
     "id": 2,
     "name": "Mermaid",
     "type": "water",
+    "weakness": "earth",
     "chosen": false
   },
   {
     "id": 3,
     "name": "Unicorn",
     "type": "earth",
+    "weakness": "fire",
     "chosen": false
   }
 ]
