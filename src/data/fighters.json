@@ -7,7 +7,8 @@
     "description": "-----",
     "type": "fire",
     "weakness": "water",
-    "chosen": false
+    "chosen": false,
+    "starter": true
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "description": "-----",
     "type": "water",
     "weakness": "earth",
-    "chosen": false
+    "chosen": false,
+    "starter": true
   },
   {
     "id": 3,
@@ -27,6 +29,40 @@
     "description": "-----",
     "type": "earth",
     "weakness": "fire",
-    "chosen": false
+    "chosen": false,
+    "starter": true
+  },
+  {
+    "id": 4,
+    "name": "Dragon",
+    "subtitle": "Arise from the fire.",
+    "image": "dragon.jpg",
+    "description": "-----",
+    "type": "fire",
+    "weakness": "water",
+    "chosen": false,
+    "starter": false
+  },
+  {
+    "id": 5,
+    "name": "Elf",
+    "subtitle": "Arise from the woods.",
+    "image": "elf.jpg",
+    "description": "-----",
+    "type": "earth",
+    "weakness": "fire",
+    "chosen": false,
+    "starter": false
+  },
+  {
+    "id": 6,
+    "name": "Hellhound",
+    "subtitle": "Arise from the fire.",
+    "image": "hellhoundCerberus.jpg",
+    "description": "-----",
+    "type": "fire",
+    "weakness": "water",
+    "chosen": false,
+    "starter": false
   }
 ]

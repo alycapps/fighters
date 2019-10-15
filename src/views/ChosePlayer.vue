@@ -11,7 +11,9 @@
         <div class="row">
           <!-- add all fighers as options -->
           <div v-for="fighter in fighters" class="col-md-4">
+            
             <Card
+              v-if="fighter.starter"
               :title="fighter.name"
               :subtitle="fighter.subtitle"
               :description="fighter.description"
