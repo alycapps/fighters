@@ -30,11 +30,6 @@ export default {
     nextPage: String,
     btnName: String
   }
-  // methods: {
-  //   imageCreator: function() {
-  //         return require(this.imgURL)
-  //       }
-  // }
 }
 </script>
 

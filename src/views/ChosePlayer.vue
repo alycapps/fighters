@@ -31,24 +31,24 @@
 </template>
 
 <script>
-import Banner from '@/components/Banner.vue'
-import Card from '@/components/Card.vue'
-import fighters from "../data/fighters.json";
+  import Banner from '@/components/Banner.vue'
+  import Card from '@/components/Card.vue'
+  import fighters from "../data/fighters.json";
 
-export default {
-  name: 'ChosePlayer',
-  components: {
-    Banner,
-    Card
-  },
-  data: function() {
-    return {
-        fighters: fighters
+  export default {
+    name: 'ChosePlayer',
+    components: {
+      Banner,
+      Card
+    },
+    data: function() {
+      return {
+          fighters: fighters
+      }
     }
   }
-}
-
 </script>
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
   #mainChosePlayer {
