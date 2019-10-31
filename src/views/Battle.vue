@@ -8,9 +8,10 @@
           <Card
             title="You"
             subtitle="Lets do this"
-            description="---"
-            source="phoenix.jpg"
+            description="Health & Strength"
+            :imgURL="fighters[0].image"
             nextPage="/player"
+            btnName="Attack"
           />           
         </div>
         <div class="col-md-4">
@@ -19,7 +20,7 @@
             subtitle="things"
             description="---"
             source="mermaid.jpg"
-                        nextPage="/player"
+            nextPage="/player"
 
           />
         </div>
@@ -27,8 +28,8 @@
           <Card
             title="Opponent"
             subtitle="Grrr"
-            description="---"
-            source="unicorn.jpg"
+            description="Health & Strength"
+            :imgURL="fighters[5].image"
             nextPage="/player"
 
           />
@@ -39,14 +40,20 @@
 </template>
 
 <script>
-import Card from '@/components/Card.vue'
+  import Card from '@/components/Card.vue'
+  import fighters from "../data/fighters.json";
 
-export default {
-  name: 'Battle',
-  components: {
-    Card
+  export default {
+    name: 'Battle',
+    components: {
+      Card
+    },
+    data: function() {
+      return {
+          fighters: fighters
+      }
+    }
   }
-}
 
 </script>
 

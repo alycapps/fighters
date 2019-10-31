@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Phoenix",
+    "battleCry": "Cacaw",
     "subtitle": "Arise from the fire.",
     "image": "phoenix.jpg",
     "description": "-----",
@@ -45,23 +46,56 @@
   },
   {
     "id": 5,
+    "name": "Hellhound",
+    "subtitle": "Arise from the fire.",
+    "image": "hellhoundCerberus.jpeg",
+    "description": "-----",
+    "type": "fire",
+    "weakness": "water",
+    "chosen": false,
+    "starter": false
+  },
+  {
+    "id": 6,
+    "name": "Volcano Monster",
+    "subtitle": "Arise from the fire.",
+    "image": "placeholder.jpg",
+    "description": "-----",
+    "type": "fire",
+    "weakness": "water",
+    "chosen": false,
+    "starter": false
+  },
+  {
+    "id": 7,
+    "name": "Demon",
+    "subtitle": "Arise from the fire.",
+    "image": "placeholder.jpg",
+    "description": "-----",
+    "type": "fire",
+    "weakness": "water",
+    "chosen": false,
+    "starter": false
+  },
+  {
+    "id": 8,
+    "name": "Narwhal",
+    "subtitle": "Arise from the water.",
+    "image": "placeholder.jpg",
+    "description": "-----",
+    "type": "water",
+    "weakness": "earth",
+    "chosen": false,
+    "starter": false
+  },
+  {
+    "id": 9,
     "name": "Elf",
     "subtitle": "Arise from the woods.",
     "image": "elf.jpg",
     "description": "-----",
     "type": "earth",
     "weakness": "fire",
-    "chosen": false,
-    "starter": false
-  },
-  {
-    "id": 6,
-    "name": "Hellhound",
-    "subtitle": "Arise from the fire.",
-    "image": "hellhoundCerberus.jpg",
-    "description": "-----",
-    "type": "fire",
-    "weakness": "water",
     "chosen": false,
     "starter": false
   }
