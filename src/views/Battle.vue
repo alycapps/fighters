@@ -11,7 +11,8 @@
             description="Health & Strength"
             :imgURL="fighters[0].image"
             nextPage="/player"
-            btnName="Attack"
+            actionBtn="Attack"
+            actionBtn2="Defend"
           />           
         </div>
         <div class="col-md-4">
