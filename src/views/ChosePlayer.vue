@@ -10,7 +10,7 @@
       <div class="container">
         <div class="row">
           <!-- add all fighers as options -->
-          <div v-for="fighter in fighters" class="col-md-4">
+          <div v-for="fighter in fighters" class="col-md-4" v-bind:key="fighter.id">
 
             <Card
               v-if="fighter.id"
