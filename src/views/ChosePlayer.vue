@@ -11,9 +11,9 @@
         <div class="row">
           <!-- add all fighers as options -->
           <div v-for="fighter in fighters" class="col-md-4">
-            
+
             <Card
-              v-if="fighter.starter"
+              v-if="fighter.id"
               :title="fighter.name"
               :subtitle="fighter.subtitle"
               :description="fighter.description"
@@ -31,22 +31,22 @@
 </template>
 
 <script>
-  import Banner from '@/components/Banner.vue'
-  import Card from '@/components/Card.vue'
-  import fighters from "../data/fighters.json";
+import Banner from '@/components/Banner.vue'
+import Card from '@/components/Card.vue'
+import fighters from '../data/fighters.json'
 
-  export default {
-    name: 'ChosePlayer',
-    components: {
-      Banner,
-      Card
-    },
-    data: function() {
-      return {
-          fighters: fighters
-      }
+export default {
+  name: 'ChosePlayer',
+  components: {
+    Banner,
+    Card
+  },
+  data: function () {
+    return {
+      fighters: fighters
     }
   }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
