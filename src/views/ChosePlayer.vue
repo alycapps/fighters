@@ -11,18 +11,21 @@
         <div class="row">
           <!-- add all fighers as options -->
           <div v-for="fighter in fighters" class="col-md-4" v-bind:key="fighter.id">
-
-            <Card
-              v-if="fighter.id"
-              :title="fighter.name"
-              :subtitle="fighter.subtitle"
-              :description="fighter.description"
-              :imgURL="fighter.image"
-              nextPage="/battle"
-              btnName="Continue"
-            />
+            <template
+              v-if="fighter.starter"
+            >
+              <Card
+                v-if="fighter.id"
+                :title="fighter.name"
+                :subtitle="fighter.subtitle"
+                :description="fighter.description"
+                :imgURL="fighter.image"
+                nextPage="/battle"
+                actionBtn2="Select"
+                btnName="Continue"
+              />
+            </template>
           </div>
-
         </div>
       </div>
       <br />

@@ -5,15 +5,45 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <Card
-            title="You"
-            subtitle="Lets do this"
-            description="Health & Strength"
-            :imgURL="fighters[0].image"
-            nextPage="/player"
-            actionBtn="Attack"
-            actionBtn2="Defend"
-          />           
+          <template
+            v-if="fighters[0].type == 'fire'"
+          >
+            <Card
+              :title="fighters[0].name + ' 🔥'"
+              subtitle="Grr"
+              description="Health"
+              :imgURL="fighters[0].image"
+              nextPage="/player"
+              actionBtn="Attack"
+              actionBtn2="Defend"
+            />
+          </template>
+          <template
+            v-else-if="fighters[0].type == 'water'"
+          >
+            <Card
+              :title="fighters[0].name + ' 💧'"
+              subtitle="Grr"
+              description="Health"
+              :imgURL="fighters[0].image"
+              nextPage="/player"
+              actionBtn="Attack"
+              actionBtn2="Defend"
+            />
+          </template>
+          <template
+            v-else-if="fighters[0].type == 'earth'"
+          >
+            <Card
+              :title="fighters[0].name + ' 🌱'"
+              subtitle="Grr"
+              description="Health"
+              :imgURL="fighters[0].image"
+              nextPage="/player"
+              actionBtn="Attack"
+              actionBtn2="Defend"
+            />
+          </template>
         </div>
         <div class="col-md-4">
           <Card
@@ -26,14 +56,39 @@
           />
         </div>
         <div class="col-md-4">
-          <Card
-            title="Opponent"
-            subtitle="Grrr"
-            description="Health & Strength"
-            :imgURL="fighters[5].image"
-            nextPage="/player"
-
-          />
+          <template
+            v-if="fighters[7].type == 'fire'"
+          >
+            <Card
+              :title="fighters[7].name + ' 🔥'"
+              subtitle="Grr"
+              description="Health & Strength"
+              :imgURL="fighters[7].image"
+              nextPage="/player"
+            />
+          </template>
+          <template
+            v-else-if="fighters[7].type == 'water'"
+          >
+            <Card
+              :title="fighters[7].name + ' 💧'"
+              subtitle="Grr"
+              description="Health & Strength"
+              :imgURL="fighters[7].image"
+              nextPage="/player"
+            />
+          </template>
+          <template
+            v-else-if="fighters[7].type == 'earth'"
+          >
+            <Card
+              :title="fighters[7].name + ' 🌱'"
+              subtitle="Grr"
+              description="Health & Strength"
+              :imgURL="fighters[7].image"
+              nextPage="/player"
+            />
+          </template>
         </div>
       </div>
     </div>
@@ -41,20 +96,20 @@
 </template>
 
 <script>
-  import Card from '@/components/Card.vue'
-  import fighters from "../data/fighters.json";
+import Card from '@/components/Card.vue'
+import fighters from '../data/fighters.json'
 
-  export default {
-    name: 'Battle',
-    components: {
-      Card
-    },
-    data: function() {
-      return {
-          fighters: fighters
-      }
+export default {
+  name: 'Battle',
+  components: {
+    Card
+  },
+  data: function () {
+    return {
+      fighters: fighters
     }
   }
+}
 
 </script>
 
