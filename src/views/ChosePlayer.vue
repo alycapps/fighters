@@ -48,6 +48,19 @@ export default {
     return {
       fighters: fighters
     }
+  },
+  methods: {
+    // clicked: function(param) {
+    //   this.lastClicked = param;
+    //   this.groceryList[param].complete = !this.groceryList[param].complete;
+    // }
+  },
+  computed: {
+    // // a computed getter
+    // reversedMessage: function () {
+    //   // `this` points to the vm instance
+    //   return this.message.split('').reverse().join('')
+    // }
   }
 }
 </script>

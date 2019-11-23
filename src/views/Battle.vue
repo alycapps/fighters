@@ -4,12 +4,10 @@
   <div id="mainBattle">
     <div class="container">
       <div class="row">
+        <!-- Players Card -->
         <div class="col-md-4">
-          <template
-            v-if="fighters[0].type == 'fire'"
-          >
             <Card
-              :title="fighters[0].name + ' 🔥'"
+              :title="playerTitle"
               subtitle="Grr"
               description="Health"
               :imgURL="fighters[0].image"
@@ -17,78 +15,25 @@
               actionBtn="Attack"
               actionBtn2="Defend"
             />
-          </template>
-          <template
-            v-else-if="fighters[0].type == 'water'"
-          >
-            <Card
-              :title="fighters[0].name + ' 💧'"
-              subtitle="Grr"
-              description="Health"
-              :imgURL="fighters[0].image"
-              nextPage="/player"
-              actionBtn="Attack"
-              actionBtn2="Defend"
-            />
-          </template>
-          <template
-            v-else-if="fighters[0].type == 'earth'"
-          >
-            <Card
-              :title="fighters[0].name + ' 🌱'"
-              subtitle="Grr"
-              description="Health"
-              :imgURL="fighters[0].image"
-              nextPage="/player"
-              actionBtn="Attack"
-              actionBtn2="Defend"
-            />
-          </template>
         </div>
+        <!-- Stats Card -->
         <div class="col-md-4">
           <Card
             title="Fight Stats"
             subtitle="things"
             description="---"
-            source="mermaid.jpg"
-            nextPage="/player"
 
           />
         </div>
+        <!-- Opponent Card -->
         <div class="col-md-4">
-          <template
-            v-if="fighters[7].type == 'fire'"
-          >
             <Card
-              :title="fighters[7].name + ' 🔥'"
+              :title="opponentTitle"
               subtitle="Grr"
               description="Health & Strength"
               :imgURL="fighters[7].image"
               nextPage="/player"
             />
-          </template>
-          <template
-            v-else-if="fighters[7].type == 'water'"
-          >
-            <Card
-              :title="fighters[7].name + ' 💧'"
-              subtitle="Grr"
-              description="Health & Strength"
-              :imgURL="fighters[7].image"
-              nextPage="/player"
-            />
-          </template>
-          <template
-            v-else-if="fighters[7].type == 'earth'"
-          >
-            <Card
-              :title="fighters[7].name + ' 🌱'"
-              subtitle="Grr"
-              description="Health & Strength"
-              :imgURL="fighters[7].image"
-              nextPage="/player"
-            />
-          </template>
         </div>
       </div>
     </div>
@@ -107,6 +52,34 @@ export default {
   data: function () {
     return {
       fighters: fighters
+      // opponent: this.fighters[7],
+      // player: this.fighters[0]
+    }
+  },
+  methods: {
+    // clicked: function(param) {
+    //   this.lastClicked = param;
+    //   this.groceryList[param].complete = !this.groceryList[param].complete;
+    // }
+    // titleWithIcon: function () {
+    //   console.log(fighters, "fighter");
+    //   if (this.fighters[0].type == 'water') return this.fighters[0].name + ' 💧';
+    //   else if (this.fighters[0].type == 'earth') return this.fighters[0].name + ' 🌱';
+    //   else if (this.fighters[0].type == 'fire') return this.fighters[0].name + ' 🔥';
+    // }
+  },
+  computed: {
+    playerTitle: function () {
+      console.log(fighters, 'fighter')
+      if (this.fighters[0].type === 'water') return this.fighters[0].name + ' 💧'
+      else if (this.fighters[0].type === 'earth') return this.fighters[0].name + ' 🌱'
+      else if (this.fighters[0].type === 'fire') return this.fighters[0].name + ' 🔥'
+    },
+    opponentTitle: function () {
+      console.log(fighters, 'fighter')
+      if (this.fighters[7].type === 'water') return this.fighters[7].name + ' 💧'
+      else if (this.fighters[7].type === 'earth') return this.fighters[7].name + ' 🌱'
+      else if (this.fighters[7].type === 'fire') return this.fighters[7].name + ' 🔥'
     }
   }
 }
