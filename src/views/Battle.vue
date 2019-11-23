@@ -10,7 +10,7 @@
               :title="playerTitle"
               subtitle="Grr"
               description="Health"
-              :imgURL="fighters[0].image"
+              :imgURL="player.image"
               nextPage="/player"
               actionBtn="Attack"
               actionBtn2="Defend"
@@ -22,7 +22,6 @@
             title="Fight Stats"
             subtitle="things"
             description="---"
-
           />
         </div>
         <!-- Opponent Card -->
@@ -31,7 +30,7 @@
               :title="opponentTitle"
               subtitle="Grr"
               description="Health & Strength"
-              :imgURL="fighters[7].image"
+              :imgURL="opponent.image"
               nextPage="/player"
             />
         </div>
@@ -51,10 +50,14 @@ export default {
   },
   data: function () {
     return {
-      fighters: fighters
-      // opponent: this.fighters[7],
-      // player: this.fighters[0]
+      fighters: fighters,
+      opponent: "",
+      player: ""
     }
+  },
+  created: function() {
+        this.opponent= this.fighters[7];
+        this.player = this.fighters[0];
   },
   methods: {
     // clicked: function(param) {
@@ -70,16 +73,17 @@ export default {
   },
   computed: {
     playerTitle: function () {
-      console.log(fighters, 'fighter')
-      if (this.fighters[0].type === 'water') return this.fighters[0].name + ' 💧'
-      else if (this.fighters[0].type === 'earth') return this.fighters[0].name + ' 🌱'
-      else if (this.fighters[0].type === 'fire') return this.fighters[0].name + ' 🔥'
+      console.log(this.fighters, 'fighters in playerTitle')
+      console.log(this.player, "player")
+      if (this.player.type === 'water') return this.player.name + ' 💧'
+      else if (this.player.type === 'earth') return this.player.name + ' 🌱'
+      else if (this.player.type === 'fire') return this.player.name + ' 🔥'
     },
     opponentTitle: function () {
-      console.log(fighters, 'fighter')
-      if (this.fighters[7].type === 'water') return this.fighters[7].name + ' 💧'
-      else if (this.fighters[7].type === 'earth') return this.fighters[7].name + ' 🌱'
-      else if (this.fighters[7].type === 'fire') return this.fighters[7].name + ' 🔥'
+      console.log(fighters, 'fighters in opponentTitle')
+      if (this.opponent.type === 'water') return this.opponent.name + ' 💧'
+      else if (this.opponent.type === 'earth') return this.opponent.name + ' 🌱'
+      else if (this.opponent.type === 'fire') return this.opponent.name + ' 🔥'
     }
   }
 }
