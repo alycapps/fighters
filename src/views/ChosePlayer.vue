@@ -14,16 +14,18 @@
             <template
               v-if="fighter.starter"
             >
-              <Card
-                v-if="fighter.id"
-                :title="fighter.name"
-                :subtitle="fighter.subtitle"
-                :description="fighter.description"
-                :imgURL="fighter.image"
-                nextPage="/battle"
-                actionBtn2="Select"
-                btnName="Continue"
-              />
+              <button v-on:click="selectPlayer">
+                <Card
+                  v-if="fighter.id"
+                  :title="fighter.name"
+                  :subtitle="fighter.subtitle"
+                  :description="fighter.description"
+                  :imgURL="fighter.image"
+                  nextPage="/battle"
+                  actionBtn2="Select"
+                  btnName="Continue"
+                />
+              </button>
             </template>
           </div>
         </div>
@@ -46,14 +48,18 @@ export default {
   },
   data: function () {
     return {
-      fighters: fighters
+      fighters: fighters,
+      opponent: ''
     }
   },
+  created: function () {
+    this.opponent = this.fighters[7],
+    this.player = this.fighters[0]
+  },
   methods: {
-    // clicked: function(param) {
-    //   this.lastClicked = param;
-    //   this.groceryList[param].complete = !this.groceryList[param].complete;
-    // }
+    selectPlayer: function (event) {
+      console.log("hello");
+    }
   },
   computed: {
     // // a computed getter
