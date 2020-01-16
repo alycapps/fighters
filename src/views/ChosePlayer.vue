@@ -22,8 +22,6 @@
                   :description="fighter.description"
                   :imgURL="fighter.image"
                   nextPage="/battle"
-                  actionBtn2="Select"
-                  btnName="Continue"
                 />
               </button>
             </template>
@@ -53,12 +51,14 @@ export default {
     }
   },
   created: function () {
-    this.opponent = this.fighters[7],
-    this.player = this.fighters[0]
+    this.opponent = this.fighters[7]
+    // this.player = this.fighters[0]
   },
   methods: {
     selectPlayer: function (event) {
       console.log("hello");
+      this.player = this.fighters[0],
+      this.$router.push({ name: "battle"})
     }
   },
   computed: {
